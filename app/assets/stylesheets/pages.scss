@@ -1,0 +1,45 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+	text-align: center;
+}
+
+li {
+	list-style: none;
+}
+
+.conversation {
+	margin-left: 35vw;
+	border: 1px solid black;
+	width: 30vw;
+	min-height: 30vh;
+}
+
+.username {
+	color: blue;
+	font-weight: 800;
+}
+
+
+.input {
+	text-align: center;
+}
+
+#input {
+	width: 250px;
+	border: 1px solid blue;
+	font-size: 16px;
+}
+
+.sendBtn {
+	width: 10vw;
+	margin-left: 45vw;
+	height: 30px;
+	background-color: darkblue;
+	color: white;
+	font-size: 16px;
+	border: 1px solid lightblue;
+	border-radius: 15px;
+}

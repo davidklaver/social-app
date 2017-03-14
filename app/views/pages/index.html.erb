@@ -1,0 +1,16 @@
+<h1>Have a conversation with yourself, <%= current_user.name %>!</h1>
+
+<div ng-app="app">
+	<div ng-controller="pagesCtrl">
+		<div class="conversation">
+			<ul>
+				<div ng-repeat="message in messages">
+					<li><span class="username"><%= current_user.name %>: </span>{{message.text}}</li>
+				</div>
+			</ul>
+		</div>
+		<p class="input">Your message: <input id="input" ng-model="veryNewMessage"></p>
+		<button ng-click="addMessage(veryNewMessage)" class="sendBtn">Send</button>
+	</div>
+<!--   {{ 1 + 1 }} -->
+</div>
