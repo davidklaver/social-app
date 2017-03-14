@@ -1,8 +1,4 @@
-<h1>Have a conversation with yourself, 
-	<% if current_user %>
-		<%= current_user.name %>
-	<% end %>
-!</h1>
+<h1>Welcome to the conversation, <% if current_user %><%=current_user.name%><% end %>!</h1>
 
 <div ng-app="app">
 	<div ng-controller="pagesCtrl">
