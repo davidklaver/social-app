@@ -1,5 +1,5 @@
 <div ng-app="app">
-	<div ng-controller="pagesCtrl">
+	<div ng-controller="pagesCtrl" ng-init="setup()">
 		<h1>Welcome to the chat, 
 		<span id="username"><%=current_user.name%></span>
 		</h1>

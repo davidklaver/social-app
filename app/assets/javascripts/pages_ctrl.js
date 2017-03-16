@@ -3,12 +3,12 @@
 
   angular.module("app").controller("pagesCtrl",function($scope, $http){
 
-  	window.$scope = $scope;
-
+ 		window.$scope = $scope;
+  	
   	$scope.setup = function() {
-		$http.get("/messages").then(function(response) {
+			$http.get("/messages").then(function(response) {
 				$scope.messages = response.data;
-				console.log("hi");
+				console.log("hi")
  			});
  		};
  	// 	$scope.addMessage = function(inputName,inputSlogan,inputPhone) {
@@ -30,7 +30,7 @@
  	// 		});
  	// 	};
   	
-  	$scope.messages = [];
+  	// $scope.messages = [];
 
   	$scope.addMessage = function(veryNewMessage) {
  			// for this if statement, since empty strings are falsey in Javascript (not in ruby, though!), instead of saying if (newMessage !== ""), I can say:
@@ -44,8 +44,11 @@
 	 			};
 	 			console.log(messageToSave);
 	 			$http.post("/messages", messageToSave).then(function(response) {
-	 				var newMessage = messageToSave;
-	 				$scope.messages.push(messageToSave);
+	 				// var newMessage = messageToSave;
+	 				// $scope.messages.push(messageToSave);
+	 				$http.get("/messages").then(function(response) {
+						$scope.messages = response.data;
+ 					});
 	 				$scope.veryNewMessage = "";
 	 				$scope.errors = [];
 	 			}, function(responseErrors) {
