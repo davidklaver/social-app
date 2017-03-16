@@ -1,0 +1,20 @@
+<div ng-app="app">
+	<div ng-controller="pagesCtrl">
+		<h1>Welcome to the chat, 
+		<span id="username"><%=current_user.name%></span>
+		</h1>
+		<div class="conversation">
+			<ul>
+				<div ng-repeat="message in messages">
+					<li><span class="username">{{message.username}}: </span>{{message.text}}</li>
+				</div>
+			</ul>
+		</div>
+		<p class="input">Your message: <input id="veryNewMessage" ng-model="veryNewMessage"></p>
+		<button ng-click="addMessage(veryNewMessage)" class="sendBtn">Send</button>
+	</div> <!-- end ng-controller -->
+</div> <!-- end ng-app -->
+<!-- name:<input ng-model="inputName">
+	 slogan:<input ng-model="inputSlogan">
+	 phone:<input ng-model="inputPhone">
+	 <button ng-click="addCompany(inputName,inputSlogan,inputPhone)">Add Company</button> -->
